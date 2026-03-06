@@ -1,0 +1,438 @@
+/* Afiliados Amazon — blog estático (conteúdo e apresentação em condições) */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f8f7f4;
+  --text: #1c1c1c;
+  --text-soft: #444;
+  --muted: #6b6b6b;
+  --link: #0d6efd;
+  --link-hover: #0a58ca;
+  --accent: #c45500;
+  --border: #e2e0db;
+  --card: #fff;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  --radius: 10px;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 2.25rem 0;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.site-header h1 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: var(--font-serif);
+}
+
+.site-header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header h1 a:hover {
+  color: var(--link);
+}
+
+.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.site-nav {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.site-nav a {
+  color: var(--link);
+  text-decoration: none;
+  margin-right: 1.25rem;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Intro */
+.intro {
+  background: var(--card);
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.intro p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* Post previews (lista na homepage) */
+.post-preview {
+  background: var(--card);
+  padding: 1.6rem 1.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.post-preview:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-color: #d0cec8;
+}
+
+.post-preview h2 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.22rem;
+  font-weight: 600;
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.post-preview h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-preview h2 a:hover {
+  color: var(--link);
+}
+
+.post-preview .meta {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.post-preview > p {
+  margin: 0 0 0.85rem 0;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.read-more {
+  font-size: 0.9rem;
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.read-more:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: var(--card);
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.04);
+}
+
+.site-footer .container {
+  padding-top: 0.25rem;
+}
+
+.site-footer p {
+  margin: 0 0 0.5rem 0;
+}
+
+.site-footer p:last-child {
+  margin-top: 0.75rem;
+}
+
+.site-footer a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ——— Página de artigo ——— */
+.article-header {
+  margin-bottom: 1.75rem;
+}
+
+.article-header .back {
+  font-size: 0.9rem;
+  color: var(--link);
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.article-header .back:hover {
+  text-decoration: underline;
+}
+
+.article-header .back:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.article-header h1 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.article-header .meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.article-content {
+  background: var(--card);
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.article-content > p:first-child {
+  margin-top: 0;
+}
+
+.article-content p {
+  margin: 0 0 1.1rem 0;
+  color: var(--text-soft);
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+.article-content a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
+}
+
+.article-content a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.affiliate-note {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.product-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-item:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.product-item strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.product-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.product-item img,
+.product-item .book-cover-link img,
+.product-item .product-img-link img {
+  display: block;
+  max-width: 200px;
+  width: 200px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+/* Capas livro: proporção 200×280 */
+.product-item .book-cover-link img {
+  width: 200px;
+  height: 280px;
+  object-fit: contain;
+}
+
+/* Placeholders quadrados: 200×200 */
+.product-item .product-img-link img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-item .product-with-image {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-item .product-with-image:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.product-item .product-with-image img,
+.product-item .book-cover-link img,
+.product-item .product-img-link img {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.product-item .product-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-item .book-cover-link {
+  display: block;
+  flex-shrink: 0;
+}
+
+.product-item .product-img-link {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 1.15rem;
+  }
+
+  .site-header {
+    padding: 1.75rem 0;
+    margin-bottom: 1.75rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.55rem;
+  }
+
+  .post-preview,
+  .intro {
+    padding: 1.25rem 1.35rem;
+  }
+
+  .post-preview h2 {
+    font-size: 1.12rem;
+  }
+
+  .article-content {
+    padding: 1.35rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .article-header h1 {
+    font-size: 1.45rem;
+  }
+
+  .product-with-image {
+    flex-direction: column;
+  }
+
+  .product-item .product-with-image img,
+  .product-item .book-cover-link img,
+  .product-item .product-img-link img {
+    max-width: 160px;
+    width: 160px;
+  }
+
+  .product-item .book-cover-link img {
+    height: 224px;
+  }
+
+  .product-item .product-img-link img {
+    height: 160px;
+  }
+}
